@@ -31,11 +31,11 @@
 
 → _doc를 빼고 생성하도록 한다.
 
-[2. 매핑 파라미터 정리](https://www.notion.so/73e53ae2e3dc47f1adf883779bd55da4)
+[2. 매핑 파라미터 정리](https://www.notion.so/a4a8e5ccef4840979c8acea379e198c1)
 
-[3. 메타 필드 정리](https://www.notion.so/81d7a8f576da40cd87b86baaa51f090e)
+[3. 메타 필드 정리](https://www.notion.so/5c0e098c1e0f4870bccd7133243a4a27)
 
-[4. 필드 데이터 타입](https://www.notion.so/d5794d6538ed40f9967e1cb51719e7fe)
+[4. 필드 데이터 타입](https://www.notion.so/f795a9d378cf487f840a042bba08266c)
 
 3.4 엘라스틱서치 분석기
 
@@ -109,14 +109,14 @@ POST _analyze
 
 문서의 역색인을 위해 토큰화 과정이 필요하다.
 
-[토큰 정보](https://www.notion.so/a0a72fb7f37e480eaa430b8714a7b79a)
+[토큰 정보](https://www.notion.so/3682729672ad407f85baeb39a35b0dc6)
 
 > Question. "elasticsearch"을 검색어로 지정하면 어떻게 될까?
 expect : 문서1과 문서2
 actual : 문서1
 solution : 가장 간단한 방법은 소문자로 변환
 
-[변환된 토큰 정보](https://www.notion.so/1c608875cd8d464bb9e88bc7d865d1ba)
+[변환된 토큰 정보](https://www.notion.so/033ec5c6536c4c4a8878e1c90c73ef25)
 
 색인을 한다는 것은, 역색인 파일을 만든다는 것이지 원문 자체를 변경한다는 의미는 아니므로 색인에 들어갈 토큰만 변경되어 저장되고 실제 문서의 내용은 변함이 없다
 
@@ -170,13 +170,13 @@ solution : 가장 간단한 방법은 소문자로 변환
     <B>Elasticsearch</B> is cool
     ```
 
-    [Character Filter](https://www.notion.so/Character-Filter-b29ff541488848e7916b28e917efaeb0)
+    [Character Filter](https://www.notion.so/Character-Filter-8f6bcaf0f067460c9200a8f397253fb6)
 
     ```jsx
     Elasticsearch is cool
     ```
 
-    [Tokenizer](https://www.notion.so/Tokenizer-91ec4a767d164a94b55203d16fe2634c)
+    [Tokenizer](https://www.notion.so/Tokenizer-23bfda8605cc4cadb075212379d45dab)
 
     ```jsx
     Elasticsearch -> Token1, Position 1
@@ -184,7 +184,7 @@ solution : 가장 간단한 방법은 소문자로 변환
     cool -> Token 3, Position 3
     ```
 
-    [Token Filter](https://www.notion.so/Token-Filter-ff23c64906a54a03a7a58a5ad57013db)
+    [Token Filter](https://www.notion.so/Token-Filter-1a7c00b4c1e34386bac5aac9628437ee)
 
     ```jsx
     elasticsearch -> Token1, Position 1
@@ -249,7 +249,7 @@ solution : 가장 간단한 방법은 소문자로 변환
     - 공백 혹은 특수 기호를 기준으로 토큰 분리
     - 모든 문자를 소문자로 변경하는 토큰 필터 사용
 
-    [파라미터](https://www.notion.so/3d997ff1d5a74171a85df4c1479b4cbc)
+    [파라미터](https://www.notion.so/d94f059e8d404d7abaaddd1df6f913a5)
 
     Whitespace
 
@@ -273,31 +273,31 @@ solution : 가장 간단한 방법은 소문자로 변환
 
     일반적으로 사용되는 토크나이저이며, 대부분의 기호를 만나면 토큰으로 나눈다.
 
-    [파라미터](https://www.notion.so/70a7d2d420474e0db79680d521b7c365)
+    [파라미터](https://www.notion.so/9224b179592c4f13a2d87e40b53a4501)
 
     Whitespace 토크나이저
 
     공백을 만나면 텍스트를 토큰화한다.
 
-    [파라미터](https://www.notion.so/b8588bcd52c54ad18f811c9066a9a334)
+    [파라미터](https://www.notion.so/5a693b86906b404aaebb17a0e488a803)
 
     Ngram 토크나이저
 
     한 글자씩 토큰화 하는 것이 기본이며, 특정 문자 지정도 가능하다. 그 밖에도 다양한 옵션을 조합해서 자동완성 등의 기능에 활용할 수 있다.
 
-    [파라미터](https://www.notion.so/603a92b541c044bca89b1af001a8505b)
+    [파라미터](https://www.notion.so/251fde2c2d0c40e1b2275e4ccd465b66)
 
     Edge Ngram 토크나이저
 
     지정된 문자의 목록 중 하나를 만날 때마다, 시작 부분을 고정시켜 단어를 자르는 방식으로 사용하는 토크나이저로서, 자동완성 등에 활용이 가능하다.
 
-    [파라미터](https://www.notion.so/bc683bd51b1e4b3ba3d4918fe81bb43f)
+    [파라미터](https://www.notion.so/f9dc7bee030d4f2fa627a13920125a13)
 
     Keyword 토크나이저
 
     텍스트를 하나의 토큰으로 만든다.
 
-    [파라미터](https://www.notion.so/67d988c25a3e48a2ab433c4369bba724)
+    [파라미터](https://www.notion.so/69dff73c0c13480f8ecbd14126734847)
 
     3.4.6 토큰 필터
 
@@ -345,19 +345,19 @@ solution : 가장 간단한 방법은 소문자로 변환
 
     불용어로 등록할 사전을 구축해서 사용하는 필터로, 인덱스로 만들고 싶지 않거나 검색되지 않게 하고 싶을 때 사용
 
-    [파라미터](https://www.notion.so/32abd7589f2c4a928266cff6534c32b0)
+    [파라미터](https://www.notion.so/8ff0aa6daab34c0288d528c234892f8b)
 
     Stemmer 토큰 필터
 
     Stemming 알고리즘을 사용해 토큰을 변형하는 필터로서, 여러 형태를 지원
 
-    [파라미터](https://www.notion.so/0032a8ecf4394e3296d4ebfefb4035d0)
+    [파라미터](https://www.notion.so/169bb22f32714158ad536202e0246456)
 
     Synonym 토큰 필터
 
     동의어를 처리할 수 있는 필터
 
-    [파라미터](https://www.notion.so/8e7ad3eda1254dc7b8e307ce3c1e92ac)
+    [파라미터](https://www.notion.so/f06a85e4878e410db453287f37cb1af5)
 
     Trim 토큰 필터
 
@@ -420,7 +420,5 @@ solution : 가장 간단한 방법은 소문자로 변환
     Delete API 요청
 
     Delete 요청 시, 인덱스를 삭제하면 모든 문서가 삭제되므로 주의
-    
-    
     
 notion : https://www.notion.so/ipaddress/Elasticsearch-3-ca8d208c9dba4a9cb6db316b20b54c35
